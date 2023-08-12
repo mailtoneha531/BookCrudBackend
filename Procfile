@@ -1,1 +1,1 @@
-web: dotnet C:\CSharpAssignments\BookAPIWithEF\bin\Release\net6.0
+web: dotnet bin/Release/net6.0
