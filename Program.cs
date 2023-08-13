@@ -79,9 +79,12 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-app.Run(async context =>
-{
-    var port = Environment.GetEnvironmentVariable("PORT") ?? "8080"; // Default port if PORT is not available
-    await context.Response.WriteAsync($"Binding to port {port}");
-});
+var port = Environment.GetEnvironmentVariable("PORT") ?? "3100";
+app.Run("http://0.0.0.0:" + port);
+
+//app.Run(async context =>
+//{
+//    var port = Environment.GetEnvironmentVariable("PORT") ?? "8080"; // Default port if PORT is not available
+//    await context.Response.WriteAsync($"Binding to port {port}");
+//});
 
