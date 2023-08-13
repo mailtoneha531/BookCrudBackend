@@ -24,7 +24,7 @@ builder.Services.AddCors(options =>
 {
     options.AddDefaultPolicy(builder =>
     {
-        builder.AllowAnyOrigin()
+        builder.WithOrigins("https://bookcrudbackend-642ad90e4962.herokuapp.com/")
                .AllowAnyMethod()
                .AllowAnyHeader();
     });
